@@ -1,0 +1,6 @@
+framework module Pods_SmartBank {
+  umbrella header "Pods-SmartBank-umbrella.h"
+
+  export *
+  module * { export * }
+}

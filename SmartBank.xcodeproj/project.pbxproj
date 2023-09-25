@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		321CC97AFDB7FE7A21B851A9 /* Pods_SmartBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB0054BE899DD39194F26EF /* Pods_SmartBank.framework */; };
+		7F1B35EE2AC1A6C70047DE4F /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B35ED2AC1A6C70047DE4F /* DatabaseManager.swift */; };
+		7F1B35F02AC1A71D0047DE4F /* SaveHomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B35EF2AC1A71D0047DE4F /* SaveHomeData.swift */; };
+		7F1B35F32AC1CBCF0047DE4F /* DataStorageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B35F22AC1CBCF0047DE4F /* DataStorageModel.swift */; };
+		7F1B35F72AC1E8590047DE4F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B35F62AC1E8590047DE4F /* LoadingView.swift */; };
+		7F601C952ABC2D5D0020F629 /* SmartBankApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F601C942ABC2D5D0020F629 /* SmartBankApp.swift */; };
+		7F601C972ABC2D5D0020F629 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F601C962ABC2D5D0020F629 /* ContentView.swift */; };
+		7F601C992ABC2D5F0020F629 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F601C982ABC2D5F0020F629 /* Assets.xcassets */; };
+		7F601C9C2ABC2D5F0020F629 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F601C9B2ABC2D5F0020F629 /* Preview Assets.xcassets */; };
+		7F601CBB2ABC4CD00020F629 /* MainDataDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F601CBA2ABC4CD00020F629 /* MainDataDTO.swift */; };
+		7FA83B3C2ABDAE2B0086CFEA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA83B3B2ABDAE2B0086CFEA /* HomeView.swift */; };
+		7FA83B3E2ABDAE500086CFEA /* BusinessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA83B3D2ABDAE500086CFEA /* BusinessView.swift */; };
+		7FA83B402ABDAE5F0086CFEA /* SportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA83B3F2ABDAE5F0086CFEA /* SportView.swift */; };
+		7FCBD1522ABF433A00742386 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCBD1512ABF433A00742386 /* SearchBar.swift */; };
+		7FEAEA2A2AC06784007F004D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEAEA292AC06784007F004D /* DetailView.swift */; };
+		7FEAEA2D2AC16513007F004D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEAEA2C2AC16513007F004D /* HomeViewModel.swift */; };
+		7FEAEA322AC17717007F004D /* SportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEAEA312AC17717007F004D /* SportViewModel.swift */; };
+		7FEAEA352AC17AA0007F004D /* BusinessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEAEA342AC17AA0007F004D /* BusinessViewModel.swift */; };
+		7FEAEA372AC1842C007F004D /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEAEA362AC1842C007F004D /* NetworkMonitor.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6EB0054BE899DD39194F26EF /* Pods_SmartBank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartBank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F1B35ED2AC1A6C70047DE4F /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		7F1B35EF2AC1A71D0047DE4F /* SaveHomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveHomeData.swift; sourceTree = "<group>"; };
+		7F1B35F22AC1CBCF0047DE4F /* DataStorageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorageModel.swift; sourceTree = "<group>"; };
+		7F1B35F62AC1E8590047DE4F /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		7F601C912ABC2D5D0020F629 /* SmartBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F601C942ABC2D5D0020F629 /* SmartBankApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartBankApp.swift; sourceTree = "<group>"; };
+		7F601C962ABC2D5D0020F629 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7F601C982ABC2D5F0020F629 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7F601C9B2ABC2D5F0020F629 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7F601CBA2ABC4CD00020F629 /* MainDataDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataDTO.swift; sourceTree = "<group>"; };
+		7FA83B3B2ABDAE2B0086CFEA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7FA83B3D2ABDAE500086CFEA /* BusinessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessView.swift; sourceTree = "<group>"; };
+		7FA83B3F2ABDAE5F0086CFEA /* SportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportView.swift; sourceTree = "<group>"; };
+		7FCBD1512ABF433A00742386 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		7FEAEA292AC06784007F004D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		7FEAEA2C2AC16513007F004D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		7FEAEA2E2AC16BE3007F004D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FEAEA312AC17717007F004D /* SportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportViewModel.swift; sourceTree = "<group>"; };
+		7FEAEA342AC17AA0007F004D /* BusinessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessViewModel.swift; sourceTree = "<group>"; };
+		7FEAEA362AC1842C007F004D /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		A57B3879A8DDB31DFB8DAE30 /* Pods-SmartBank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBank.release.xcconfig"; path = "Target Support Files/Pods-SmartBank/Pods-SmartBank.release.xcconfig"; sourceTree = "<group>"; };
+		E35E2CACCF7BA2BEF2EEF81C /* Pods-SmartBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBank.debug.xcconfig"; path = "Target Support Files/Pods-SmartBank/Pods-SmartBank.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7F601C8E2ABC2D5D0020F629 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				321CC97AFDB7FE7A21B851A9 /* Pods_SmartBank.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0DDD4F3BDA93251A8F94EFBE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6EB0054BE899DD39194F26EF /* Pods_SmartBank.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F1B35EB2AC1A6550047DE4F /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				7FEAEA292AC06784007F004D /* DetailView.swift */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		7F1B35EC2AC1A6B00047DE4F /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				7F1B35ED2AC1A6C70047DE4F /* DatabaseManager.swift */,
+				7F1B35EF2AC1A71D0047DE4F /* SaveHomeData.swift */,
+				7F1B35F12AC1A7A10047DE4F /* SavedHomeDataModel */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		7F1B35F12AC1A7A10047DE4F /* SavedHomeDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				7F1B35F22AC1CBCF0047DE4F /* DataStorageModel.swift */,
+			);
+			path = SavedHomeDataModel;
+			sourceTree = "<group>";
+		};
+		7F601C882ABC2D5D0020F629 = {
+			isa = PBXGroup;
+			children = (
+				7F601C932ABC2D5D0020F629 /* SmartBank */,
+				7F601C922ABC2D5D0020F629 /* Products */,
+				8CA648EC42DD7454D1B7BF8C /* Pods */,
+				0DDD4F3BDA93251A8F94EFBE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7F601C922ABC2D5D0020F629 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7F601C912ABC2D5D0020F629 /* SmartBank.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7F601C932ABC2D5D0020F629 /* SmartBank */ = {
+			isa = PBXGroup;
+			children = (
+				7F1B35EC2AC1A6B00047DE4F /* Database */,
+				7FEAEA2E2AC16BE3007F004D /* Info.plist */,
+				7F601C982ABC2D5F0020F629 /* Assets.xcassets */,
+				7FEAEA332AC1784C007F004D /* Root */,
+				7F601CB92ABC4CAF0020F629 /* Models */,
+				7FCBD1502ABF432A00742386 /* Helper */,
+				7FA83B382ABDAD6E0086CFEA /* TabViews */,
+				7F601C9A2ABC2D5F0020F629 /* Preview Content */,
+			);
+			path = SmartBank;
+			sourceTree = "<group>";
+		};
+		7F601C9A2ABC2D5F0020F629 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7F601C9B2ABC2D5F0020F629 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7F601CB92ABC4CAF0020F629 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7F601CBA2ABC4CD00020F629 /* MainDataDTO.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7FA83B382ABDAD6E0086CFEA /* TabViews */ = {
+			isa = PBXGroup;
+			children = (
+				7F1B35EB2AC1A6550047DE4F /* DetailView */,
+				7FEAEA282AC06776007F004D /* Home */,
+				7FEAEA2F2AC175AB007F004D /* BusinessView */,
+				7FEAEA302AC175CD007F004D /* SportView */,
+			);
+			path = TabViews;
+			sourceTree = "<group>";
+		};
+		7FCBD1502ABF432A00742386 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				7F1B35F62AC1E8590047DE4F /* LoadingView.swift */,
+				7FCBD1512ABF433A00742386 /* SearchBar.swift */,
+				7FEAEA362AC1842C007F004D /* NetworkMonitor.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		7FEAEA282AC06776007F004D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7FEAEA2C2AC16513007F004D /* HomeViewModel.swift */,
+				7FA83B3B2ABDAE2B0086CFEA /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7FEAEA2F2AC175AB007F004D /* BusinessView */ = {
+			isa = PBXGroup;
+			children = (
+				7FEAEA342AC17AA0007F004D /* BusinessViewModel.swift */,
+				7FA83B3D2ABDAE500086CFEA /* BusinessView.swift */,
+			);
+			path = BusinessView;
+			sourceTree = "<group>";
+		};
+		7FEAEA302AC175CD007F004D /* SportView */ = {
+			isa = PBXGroup;
+			children = (
+				7FEAEA312AC17717007F004D /* SportViewModel.swift */,
+				7FA83B3F2ABDAE5F0086CFEA /* SportView.swift */,
+			);
+			path = SportView;
+			sourceTree = "<group>";
+		};
+		7FEAEA332AC1784C007F004D /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				7F601C942ABC2D5D0020F629 /* SmartBankApp.swift */,
+				7F601C962ABC2D5D0020F629 /* ContentView.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		8CA648EC42DD7454D1B7BF8C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E35E2CACCF7BA2BEF2EEF81C /* Pods-SmartBank.debug.xcconfig */,
+				A57B3879A8DDB31DFB8DAE30 /* Pods-SmartBank.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7F601C902ABC2D5D0020F629 /* SmartBank */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F601C9F2ABC2D5F0020F629 /* Build configuration list for PBXNativeTarget "SmartBank" */;
+			buildPhases = (
+				CF1EA2D060AF27354FEE4262 /* [CP] Check Pods Manifest.lock */,
+				7F601C8D2ABC2D5D0020F629 /* Sources */,
+				7F601C8E2ABC2D5D0020F629 /* Frameworks */,
+				7F601C8F2ABC2D5D0020F629 /* Resources */,
+				9D8AF8305C2E86053A0A4C85 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmartBank;
+			productName = SmartBank;
+			productReference = 7F601C912ABC2D5D0020F629 /* SmartBank.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7F601C892ABC2D5D0020F629 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					7F601C902ABC2D5D0020F629 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 7F601C8C2ABC2D5D0020F629 /* Build configuration list for PBXProject "SmartBank" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7F601C882ABC2D5D0020F629;
+			productRefGroup = 7F601C922ABC2D5D0020F629 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7F601C902ABC2D5D0020F629 /* SmartBank */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7F601C8F2ABC2D5D0020F629 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F601C9C2ABC2D5F0020F629 /* Preview Assets.xcassets in Resources */,
+				7F601C992ABC2D5F0020F629 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9D8AF8305C2E86053A0A4C85 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartBank/Pods-SmartBank-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartBank/Pods-SmartBank-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmartBank/Pods-SmartBank-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF1EA2D060AF27354FEE4262 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartBank-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F601C8D2ABC2D5D0020F629 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FA83B3E2ABDAE500086CFEA /* BusinessView.swift in Sources */,
+				7F1B35F32AC1CBCF0047DE4F /* DataStorageModel.swift in Sources */,
+				7FEAEA372AC1842C007F004D /* NetworkMonitor.swift in Sources */,
+				7F1B35EE2AC1A6C70047DE4F /* DatabaseManager.swift in Sources */,
+				7FEAEA322AC17717007F004D /* SportViewModel.swift in Sources */,
+				7F1B35F72AC1E8590047DE4F /* LoadingView.swift in Sources */,
+				7F601C972ABC2D5D0020F629 /* ContentView.swift in Sources */,
+				7FEAEA352AC17AA0007F004D /* BusinessViewModel.swift in Sources */,
+				7FA83B3C2ABDAE2B0086CFEA /* HomeView.swift in Sources */,
+				7FCBD1522ABF433A00742386 /* SearchBar.swift in Sources */,
+				7FEAEA2A2AC06784007F004D /* DetailView.swift in Sources */,
+				7F601CBB2ABC4CD00020F629 /* MainDataDTO.swift in Sources */,
+				7FEAEA2D2AC16513007F004D /* HomeViewModel.swift in Sources */,
+				7F601C952ABC2D5D0020F629 /* SmartBankApp.swift in Sources */,
+				7FA83B402ABDAE5F0086CFEA /* SportView.swift in Sources */,
+				7F1B35F02AC1A71D0047DE4F /* SaveHomeData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7F601C9D2ABC2D5F0020F629 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7F601C9E2ABC2D5F0020F629 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7F601CA02ABC2D5F0020F629 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E35E2CACCF7BA2BEF2EEF81C /* Pods-SmartBank.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SmartBank/Preview Content\"";
+				DEVELOPMENT_TEAM = X6EUQ23K5S;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SmartBank/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.SmartBank;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7F601CA12ABC2D5F0020F629 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A57B3879A8DDB31DFB8DAE30 /* Pods-SmartBank.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SmartBank/Preview Content\"";
+				DEVELOPMENT_TEAM = A2DKYUG5HM;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SmartBank/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.SmartBank;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F601C8C2ABC2D5D0020F629 /* Build configuration list for PBXProject "SmartBank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F601C9D2ABC2D5F0020F629 /* Debug */,
+				7F601C9E2ABC2D5F0020F629 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F601C9F2ABC2D5F0020F629 /* Build configuration list for PBXNativeTarget "SmartBank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F601CA02ABC2D5F0020F629 /* Debug */,
+				7F601CA12ABC2D5F0020F629 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7F601C892ABC2D5D0020F629 /* Project object */;
+}
