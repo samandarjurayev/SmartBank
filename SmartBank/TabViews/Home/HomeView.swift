@@ -92,7 +92,9 @@ struct HomeView: View {
                 }
             }
             .onAppear(perform: {
-                viewModel.fetchHomeData()
+                if networkingMonitor.isActive {
+                    viewModel.fetchHomeData()
+                }
             })
             .navigationBarTitle("Home", displayMode: .large)
         }

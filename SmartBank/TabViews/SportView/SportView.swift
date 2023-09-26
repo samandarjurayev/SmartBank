@@ -31,7 +31,7 @@ struct SportView: View {
                                 Text(sportData.title ?? "")
                                     .font(.system(size: 18))
                                     .lineLimit(2)
-                                Text(sportData.description ?? "")
+                                Text(sportData.description ?? "No Description")
                                     .font(.system(size: 16))
                                     .foregroundColor(.secondary)
                                     .lineLimit(2)
@@ -42,6 +42,10 @@ struct SportView: View {
                                 .scaledToFit()
                                 .frame(width: 130, height: 150)
                                 .progressViewStyle(.circular)
+                            
+                            if sportData.urlToImage == nil {
+                                Text("No Image")
+                            }
                         }
                     }
                 }
