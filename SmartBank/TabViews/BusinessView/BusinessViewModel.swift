@@ -11,8 +11,8 @@ import Combine
 
 class BusinessViewModel: ObservableObject {
     
-    @Published var sportData: MainDataDTO?
-    @Published var sportDataList: [ArticleDTO] = [ArticleDTO]()
+    @Published var businessData: MainDataDTO?
+    @Published var businessDataList: [ArticleDTO] = [ArticleDTO]()
 
     
     private var task: Cancellable? = nil
@@ -38,7 +38,7 @@ class BusinessViewModel: ObservableObject {
                 switch response.result {
                     
                 case .success(let model):
-                    self?.sportDataList = model.articles ?? []
+                    self?.businessDataList = model.articles ?? []
                     
                 case .failure(let error):
                     print(error.localizedDescription)

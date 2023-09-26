@@ -18,32 +18,36 @@ struct BusinessView: View {
             
             VStack() {
                 
-                if businessModel.sportDataList.isEmpty {
+                if businessModel.businessDataList.isEmpty {
                     LoadingView()
                         .frame(width: 50, height: 50)
                 }
                 
-                List(businessModel.sportDataList, id: \.id) { sportData in
+                List(businessModel.businessDataList, id: \.id) { businessData in
                     
-                    NavigationLink { DetailView(articleData: sportData) } label: {
+                    NavigationLink { DetailView(articleData: businessData) } label: {
                         HStack(spacing: 20) {
                             
                             VStack(alignment: .leading, spacing: 10) {
                                 
-                                Text(sportData.title ?? "")
+                                Text(businessData.title ?? "")
                                     .font(.system(size: 18))
                                     .lineLimit(2)
-                                Text(sportData.description ?? "")
+                                Text(businessData.description ?? "No Description")
                                     .font(.system(size: 16))
                                     .foregroundColor(.secondary)
                                     .lineLimit(2)
                             }
                             
-                            KFImage(URL(string: sportData.urlToImage ?? ""))
+                            KFImage(URL(string: businessData.urlToImage ?? ""))
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 130, height: 150)
                                 .progressViewStyle(.circular)
+                            
+                            if businessData.urlToImage == nil {
+                                Text("No Image")
+                            }
                         }
                     }
                 }
