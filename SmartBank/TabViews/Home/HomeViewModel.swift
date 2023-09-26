@@ -15,7 +15,7 @@ class HomeViewModel: NSObject, ObservableObject {
     @Published var homeData: MainDataDTO?
     @Published var homeDataList: [ArticleDTO] = [ArticleDTO]()
     @Published var searchIngText: String =  ""
-    @ObservedObject var monitor = NetworkMonitor()
+    
     
     private var task: Cancellable? = nil
     
@@ -23,19 +23,12 @@ class HomeViewModel: NSObject, ObservableObject {
     
     func fetchHomeData() {
         
-        if !monitor.isConnected, let homeData = DatabaseManager.shared.getMainDataDTO(), let articles = homeData.articles  {
-            
-            homeDataList = articles
-
-            return
-        }
-        
         guard let url = URL(string: baseUrl + "top-headlines?country=us&apiKey=45ad8e594a444b6e8f9a6a88a1bf2ab7") else { return }
         
         self.task = AF.request(url, method: .get, parameters: nil)
             .publishDecodable(type: MainDataDTO.self)
             .sink(receiveCompletion: { completion in
-                            
+                
                 switch completion {
                     
                 case .finished:
@@ -57,10 +50,20 @@ class HomeViewModel: NSObject, ObservableObject {
                     print(error.localizedDescription)
                 }
             })
+        
     }
     
     private func saveingHomeData(data: MainDataDTO) {
         DatabaseManager.shared.saveingHomeData(data: data)
+    }
+    
+    func fetchFromDatabase() -> [ArticleDTO] {
+        if let homeData = DatabaseManager.shared.getMainDataDTO(), let articles = homeData.articles  {
+            
+            return articles
+        }
+        
+        return []
     }
 }
 

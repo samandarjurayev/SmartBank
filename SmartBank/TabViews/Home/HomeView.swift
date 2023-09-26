@@ -16,47 +16,80 @@ struct HomeView: View {
     
     @State private var isLoading = false
     
+    @StateObject private var networkingMonitor = NetworkMonitor()
+    
     var body: some View {
-        
         
         NavigationView {
             VStack() {
+                
                 SearchBar(text: $searchData).padding([.leading, .trailing])
                     .onChange(of: searchData) { text in
                         viewModel.fetchSearchingResult(text: text)
                     }
-                
-                if viewModel.homeDataList.isEmpty {
-                    LoadingView()
-                        .frame(width: 50, height: 50)
-                }
-                
-                List(viewModel.homeDataList, id: \.id) {  homeData in
-                    
-                    NavigationLink { DetailView(articleData: homeData) } label: {
-                        HStack(spacing: 20) {
-                            
-                            VStack(alignment: .leading, spacing: 10) {
                                 
-                                Text(homeData.title ?? "")
-                                    .font(.system(size: 18))
-                                    .lineLimit(2)
-                                Text(homeData.description ?? "")
-                                    .font(.system(size: 16))
-                                    .foregroundColor(.secondary)
-                                    .lineLimit(2)
+                if !networkingMonitor.isActive {
+                    Text("No Internet")
+                    
+                    List(viewModel.fetchFromDatabase(), id: \.id) {  homeData in
+                        
+                        NavigationLink { DetailView(articleData: homeData) } label: {
+                            HStack(spacing: 20) {
+                                
+                                VStack(alignment: .leading, spacing: 10) {
+                                    
+                                    Text(homeData.title ?? "")
+                                        .font(.system(size: 18))
+                                        .lineLimit(2)
+                                    Text(homeData.description ?? "")
+                                        .font(.system(size: 16))
+                                        .foregroundColor(.secondary)
+                                        .lineLimit(2)
+                                }
+                                
+                                KFImage(URL(string: homeData.urlToImage ?? ""))
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 130, height: 150)
+                                    .progressViewStyle(.circular)
                             }
-                            
-                            KFImage(URL(string: homeData.urlToImage ?? ""))
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 130, height: 150)
-                                .progressViewStyle(.circular)
                         }
                     }
+                    .listStyle(PlainListStyle())
+                    
+                } else {
+                    
+                    if viewModel.homeDataList.isEmpty {
+                        LoadingView()
+                            .frame(width: 50, height: 50)
+                    }
+
+                    List(viewModel.homeDataList, id: \.id) {  homeData in
+                        
+                        NavigationLink { DetailView(articleData: homeData) } label: {
+                            HStack(spacing: 20) {
+                                
+                                VStack(alignment: .leading, spacing: 10) {
+                                    
+                                    Text(homeData.title ?? "")
+                                        .font(.system(size: 18))
+                                        .lineLimit(2)
+                                    Text(homeData.description ?? "")
+                                        .font(.system(size: 16))
+                                        .foregroundColor(.secondary)
+                                        .lineLimit(2)
+                                }
+                                
+                                KFImage(URL(string: homeData.urlToImage ?? ""))
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 130, height: 150)
+                                    .progressViewStyle(.circular)
+                            }
+                        }
+                    }
+                    .listStyle(PlainListStyle())
                 }
-                
-                .listStyle(PlainListStyle())
             }
             .onAppear(perform: {
                 viewModel.fetchHomeData()
